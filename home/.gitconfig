@@ -1,0 +1,170 @@
+[user]
+	name = ko5ch3y
+	email = ko5ch3y@unseen.is
+[color]
+	diff = always
+	status = always
+	branch = always
+	ui = true
+[color "status"]
+	untracked = magenta
+[alias]
+	a   = add
+	ap  = add -p
+	af  = add -f
+	au  = add -u
+	as  = ! sh -c 'git diff --ignore-all-space --no-color "$@" | git apply --cached --ignore-whitespace' -
+	b   = branch
+	ba  = branch --all
+	bc  = rev-parse --symbolic-full-name --abbrev-ref HEAD
+	bd  = branch --delete
+	bD  = branch -D
+	bf  = branch --force
+	bm  = branch --move
+
+	bl  = blame
+	bn  = bundle create origin-master..master.bundle origin/master..master
+	c   = config
+
+	ch  = cherry-pick
+
+	cl  = ! sh -c 'git clone --no-checkout $1 $2/$2.tmp && \
+           mv $2/$2.tmp/.git $2/ && rm -rf $2/$2.tmp && \
+           cd $2 && git reset && git checkout -b tmp && \
+           git add . && git commit -m wip && git format-patch master --stdout > ../wip.patch && \
+           git checkout master && git reset --hard && git apply ../wip.patch && \
+           rm -f ../wip.patch' -
+
+	d   = diff --ignore-space-change
+	di  = diff --ignore-space-change --staged
+	dw  = diff --color-words --ignore-space-change
+	dp  = diff --no-color
+	ds  = diff --stat
+	dc  = ! git diff --ignore-space-change "$1^..$1" $2
+	dcw = ! git diff --color-words --ignore-space-change "$1^..$1" $2
+	dcp = ! git diff --no-color "$1^..$1" $2
+	dcs = ! git diff --stat "$1^..$1" $2
+
+	e   = ! exec
+	ee  = ! exec e
+
+	h   = help
+
+	i   = commit -q
+	im  = commit -qm
+	ia  = commit -qa
+	iam = commit -qam
+	id  = commit -q --amend
+	iad = commit -qa --amend
+
+	ls  = ls-tree -r --abbrev HEAD
+
+	l   = log --pretty='%C(cyan)%h%C(reset)%C(green)%d%C(reset) %s %C(yellow)%an%C(reset)' --graph -10
+	ll  = log --pretty='%C(cyan)%h%C(reset)%C(green)%d%C(reset) %s %C(yellow)%an%C(reset)' --graph
+	la  = log --pretty='%C(cyan)%h%C(reset)%C(green)%d%C(reset) %s %C(yellow)%an%C(reset)' --graph --all
+	lh  = log --pretty='%C(cyan)%h%C(reset)%C(green)%d%C(reset) %s %C(yellow)%an%C(reset)' --graph HEAD
+	lp  = log --pretty='%C(cyan)%h%C(reset)%C(green)%d%C(reset) %s %C(yellow)%an%C(reset)' --graph --patch --ignore-all-space
+	lb  = log --pretty='%C(cyan)%h%C(reset)%C(green)%d%C(reset) %s %C(yellow)%an%C(reset)' --graph --branches
+	lm  = log --pretty='%C(cyan)%h%C(reset)%C(green)%d%C(reset) %s %C(yellow)%an%C(reset)' --graph --merges
+
+	m   = merge -q
+	mm  = merge -q -m
+	mmm = merge -q master -m 'Merge master'
+	mf  = merge -q --no-ff
+	mfm = merge -q --no-ff -m
+	mt  = mergetool
+	ms  = merge -q --squash
+
+	mv  = mv
+
+	o   = checkout
+	om  = checkout master
+	ow  = checkout wip
+	ob  = checkout -b
+
+	p   = format-patch
+	pc  = format-patch -1
+
+	pl  = ! git fetch --prune origin && git rebase --preserve-merges origin/$(git bc)
+	ps  = push --set-upstream origin
+	psa = push --all
+	psm = push --mirror
+
+	r   = reset -q
+	rh  = reset -q --hard
+	rl  = ! sh -c 'git reset -q -- $1 && git checkout -- $1' -
+
+	rb  = rebase
+	rbc = rebase --continue
+	rba = rebase --abort
+	rbs = rebase --skip
+	rbp = rebase --preserve-merges
+	rbm = ! git rb master
+	rbi = ! git rb --interactive
+	rbo = ! git rb --onto
+	rnm = ! git rbm wip && git om && git md
+	rbim= ! git rbi master
+
+	rm  = rm
+	rmc = rm --cached
+
+	rp  = repack -f -a -d --depth=250 --window=250
+
+	rt  = revert
+
+	s   = status -s
+	su  = status -s -uno
+
+	sb  = subtree
+	sba = subtree add   --squash -P
+	sbl = subtree pull  --squash -P
+	sbs = subtree push  --squash -P
+	sbm = subtree merge --squash -P
+	sbt = subtree split -P
+
+	t   = tag
+	td  = tag -d
+	tf  = tag -f
+
+	v   = stash
+	va  = stash apply
+	vd  = stash drop
+	vl  = stash list
+	vp  = stash pop
+	vs  = stash save
+	vsp = stash save --patch
+	vw  = stash show
+
+[merge "keep-mine"]
+	name = always keep my version during merge
+	driver = echo keeping mine > /dev/null
+
+[merge]
+	tool = ediff
+
+[mergetool "ediff"]
+	cmd = emacsclient -s gui -c -a \"\"  --eval \"(ediff-merge-files-with-ancestor \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$BASE\\\" nil \\\"$MERGED\\\")\"
+
+[mergetool]
+	keepBackup = false
+	prompt = false
+
+[diff]
+	wordRegex = "\\w+|[^\\n]$|[^[:space:]]"
+
+[rebase]
+	autosquash = true
+
+[pager]
+	status = true
+	log    = true
+
+[core]
+	excludesfile = ~/.gitexclude
+
+[push]
+	default = current
+[http]
+  #proxy = http://localhost:8118
+[https]
+  #proxy = https://localhost:8118
