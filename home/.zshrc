@@ -14,4 +14,6 @@ source "$HOME/.antigen.zsh"
 antigen bundles <<EOB
   robbyrussell/oh-my-zsh lib/
 EOB
+
+antigen theme robbyrussell
 # </ Antigen setup >
