@@ -7,3 +7,6 @@ checkout = git clone 'https://github.com/andsens/homeshick.git' 'homeshick'
 
 [.homesick/repos/myrepos]
 checkout = git clone 'https://github.com/joeyh/myrepos.git' 'myrepos'
+
+[.homesick/repos/antigen]
+checkout = git clone 'https://github.com/zsh-users/antigen.git' 'antigen'
