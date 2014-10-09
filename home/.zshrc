@@ -30,4 +30,6 @@ alias g='git'
 for ga in ` git config -l | \grep alias | cut -d '.' -f 2 | sed -e 's/=.*//g' ` ; do
   alias g${ga}="git ${ga}"
 done
+
+eval `keychain --eval --agents ssh id_ecdsa id_rsa`
 # </ Misc >
