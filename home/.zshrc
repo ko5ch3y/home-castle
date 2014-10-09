@@ -24,4 +24,10 @@ antigen theme robbyrussell
 export PATH="$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 # ArchLinux paths
 export PATH="$PATH:/usr/bin/vendor_perl:/usr/bin/core_perl"
+
+# Shell aliases for all git aliases
+alias g='git'
+for ga in ` git config -l | \grep alias | cut -d '.' -f 2 | sed -e 's/=.*//g' ` ; do
+  alias g${ga}="git ${ga}"
+done
 # </ Misc >
