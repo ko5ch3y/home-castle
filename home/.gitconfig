@@ -85,10 +85,10 @@
 	p   = format-patch
 	pc  = format-patch -1
 
-	pl  = ! git fetch --prune origin && git rebase --preserve-merges origin/$(git bc)
-	ps  = push --set-upstream origin
-	psa = push --all
-	psm = push --mirror
+	pl  = pull --rebase=preserve --prune
+	ps  = push --set-upstream
+	psa = push --set-upstream --all
+	psm = push --set-upstream --mirror
 
 	r   = reset -q
 	rh  = reset -q --hard
@@ -113,7 +113,7 @@
 
 	rt  = revert
 
-	s   = status -s
+	s   = status --short --branch
 	su  = status -s -uno
 
 	sb  = subtree
