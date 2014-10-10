@@ -1,0 +1,33 @@
+
+nmap <A-p> gT
+nmap <A-n> gt
+imap <A-p> <Esc>gT
+imap <A-n> <Esc>gt
+nmap <A-S-p> gT
+nmap <A-S-n> gt
+imap <A-S-p> <Esc>gT
+imap <A-S-n> <Esc>gt
+
+nmap s :stop<CR>
+
+cmap <A-z> <Esc>
+imap <A-z> <Esc>
+nmap <A-z> <Esc>
+cmap <A-S-z> <Esc>
+imap <A-S-z> <Esc>
+nmap <A-S-z> <Esc>
+
+cmap <A-h> <C-h>
+imap <A-h> <C-h>
+cmap <A-S-h> <C-h>
+imap <A-S-h> <C-h>
+
+nmap <A-u> <C-u>
+nmap <A-d> <C-d>
+nmap <A-S-u> <C-u>
+nmap <A-S-d> <C-d>
+
+imap <A-w> <C-w>
+imap <A-S-w> <C-w>
+
+set gui=none
