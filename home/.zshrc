@@ -41,6 +41,7 @@ else
 fi
 
 export LESS=FRX
+export XDG_CACHE_HOME=~/data/cache
 #
 # </ Envars >
 #
