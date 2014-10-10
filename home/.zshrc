@@ -1,3 +1,5 @@
+source /etc/profile
+
 #
 # < Homeshick setup >
 #
