@@ -113,7 +113,8 @@
 
 	rt  = revert
 
-	s   = status --short --branch
+	s   = status --short
+	sb  = status --short --branch
 	su  = status -s -uno
 
 	sb  = subtree
