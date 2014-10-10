@@ -102,6 +102,7 @@
 	rbm = ! git rb master
 	rbi = ! git rb --interactive
 	rbo = ! git rb --onto
+	rbom= ! git rb --onto master
 	rnm = ! git rbm wip && git om && git md
 	rbim= ! git rbi master
 
