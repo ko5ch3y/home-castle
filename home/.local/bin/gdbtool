@@ -1,0 +1,16 @@
+#!/bin/bash
+
+emacs --eval \
+    "(progn
+       (split-window-horizontally)
+       (unless (locate-library \"gdb-mi\")
+               (windmove-right))
+       (if (locate-library \"gdb-mi\")
+           (gdb \"gdb -i=mi\")
+           (gdb \"gdb --annotate=3\"))
+       (sleep-for 0.5)
+       (evil-normal-state)
+       (insert \"file $1\")
+       (comint-send-input)
+       (unless (locate-library \"gdb-mi\")
+               (windmove-right)))"
