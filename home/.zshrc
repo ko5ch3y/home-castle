@@ -32,4 +32,11 @@ for ga in ` git config -l | \grep alias | cut -d '.' -f 2 | sed -e 's/=.*//g' ` 
 done
 
 eval `keychain --eval --agents ssh id_ecdsa id_rsa`
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vi'
+else
+  export EDITOR='e'
+fi
 # </ Misc >
