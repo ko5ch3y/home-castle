@@ -55,6 +55,21 @@ alias g='git'
 for ga in ` git config -l | \grep alias | cut -d '.' -f 2 | sed -e 's/=.*//g' ` ; do
   alias g${ga}="git ${ga}"
 done
+
+alias ap='apack --quiet'
+alias au='aunpack --quiet'
+alias d='diff --new-file --text --unified --recursive'
+alias f='df -h'
+alias fr='free --total --mega'
+alias l='ls --group-directories-first -X'
+alias ll='l -lh'
+alias m='make --jobs'
+alias rs='rsync --progress --archive'
+alias rp='grep --exclude-from=$HOME/.grepexclude --ignore-case -I -e'
+alias s='sudo -E'
+alias u='du -hsc'
+alias w='watch --interval 1 --differences'
+alias z='7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on'
 #
 # </ Aliases >
 #
