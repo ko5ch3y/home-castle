@@ -39,6 +39,8 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='e'
 fi
+
+export LESS=FRX
 #
 # </ Envars >
 #
