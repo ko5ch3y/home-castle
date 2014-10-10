@@ -28,6 +28,29 @@ antigen theme robbyrussell
 
 
 #
+# < ZSH setup />
+#
+# Vi mode bindings
+bindkey -v
+bindkey -M vicmd '^[d' down-line-or-history
+bindkey -M vicmd '^[D' down-line-or-history
+bindkey -M viins '^[h' vi-backward-delete-char
+bindkey -M viins '^[H' vi-backward-delete-char
+bindkey -M vicmd '^[h' vi-backward-delete-char
+bindkey -M vicmd '^[H' vi-backward-delete-char
+bindkey -M vicmd '^[u' up-line-or-history
+bindkey -M vicmd '^[U' up-line-or-history
+bindkey -M viins '^[w' vi-backward-kill-word
+bindkey -M viins '^[W' vi-backward-kill-word
+bindkey -M vicmd '^[w' vi-backward-kill-word
+bindkey -M vicmd '^[W' vi-backward-kill-word
+bindkey -M viins '^[z' vi-cmd-mode
+#
+# < ZSH setup />
+#
+
+
+#
 # < Envars >
 #
 export PATH="$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
