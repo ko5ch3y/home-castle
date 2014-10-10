@@ -87,6 +87,7 @@
 
 	pl  = pull --rebase=preserve --prune
 	ps  = push --set-upstream
+	psf = push --set-upstream --force
 	psa = push --set-upstream --all
 	psm = push --set-upstream --mirror
 
