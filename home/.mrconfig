@@ -16,3 +16,6 @@ checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh.git' 'https-COLO
 
 [.homesick/repos/gruvbox-generalized]
 checkout = git clone 'https://github.com/morhetz/gruvbox-generalized.git' 'gruvbox-generalized'
+
+[.homesick/repos/pentadactyl-gruvbox]
+checkout = git clone 'https://github.com/rominf/pentadactyl-gruvbox.git' 'pentadactyl-gruvbox'

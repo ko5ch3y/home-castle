@@ -3,4 +3,6 @@
 loadplugins '\.(js|penta)$'
 group user
 
+colorscheme gruvbox-dark
+
 " vim: set ft=pentadactyl:
