@@ -13,3 +13,6 @@ checkout = git clone 'https://github.com/zsh-users/antigen.git' 'antigen'
 
 [.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git]
 checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh.git' 'https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git'
+
+[.homesick/repos/gruvbox-generalized]
+checkout = git clone 'https://github.com/morhetz/gruvbox-generalized.git' 'gruvbox-generalized'
