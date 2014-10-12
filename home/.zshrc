@@ -21,7 +21,6 @@ antigen bundles <<EOB
   robbyrussell/oh-my-zsh lib/
 EOB
 
-antigen theme robbyrussell
 #
 # </ Antigen setup >
 #
@@ -101,6 +100,8 @@ alias z='7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on'
 # < Misc >
 #
 eval `keychain --eval --agents ssh id_ecdsa id_rsa`
+
+source $HOME/.powerline.zsh
 #
 # </ Misc >
 #

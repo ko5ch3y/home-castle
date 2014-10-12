@@ -19,3 +19,6 @@ checkout = git clone 'https://github.com/morhetz/gruvbox-generalized.git' 'gruvb
 
 [.homesick/repos/pentadactyl-gruvbox]
 checkout = git clone 'https://github.com/rominf/pentadactyl-gruvbox.git' 'pentadactyl-gruvbox'
+
+[.homesick/repos/powerline]
+checkout = git clone 'https://github.com/Lokaltog/powerline.git' 'powerline'
