@@ -5,4 +5,17 @@ group user
 
 colorscheme gruvbox-dark
 
+map -count -modes=n,v <A-n> <count>:tabnext<Return>
+map -count -modes=n,v <A-p> <count>:tabprevious<Return>
+map -count -modes=n,v <A-u> <count><scroll-up>
+map -count -modes=n,v <A-d> <count><scroll-down>
+
+map -count -modes=i <A-n> <Esc>:tabnext<Return>
+map -count -modes=i <A-p> <Esc>:tabprevious<Return>
+map -count -modes=i <A-w> <C-w>
+
+map -count -modes=n,v s :stop<Return>
+
+map -count -modes=n,v,i <A-z> <Esc>
+
 " vim: set ft=pentadactyl:
