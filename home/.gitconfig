@@ -85,7 +85,7 @@
 	p   = format-patch
 	pc  = format-patch -1
 
-	pl  = pull --rebase=preserve --prune
+	pl  = pull --rebase=preserve --prune origin
 	ps  = push --set-upstream
 	psf = push --set-upstream --force
 	psa = push --set-upstream --all
