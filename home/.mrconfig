@@ -22,3 +22,6 @@ checkout = git clone 'https://github.com/rominf/pentadactyl-gruvbox.git' 'pentad
 
 [.homesick/repos/powerline]
 checkout = git clone 'https://github.com/Lokaltog/powerline.git' 'powerline'
+
+[.homesick/repos/ssh-ident]
+checkout = git clone 'https://github.com/ccontavalli/ssh-ident.git' 'ssh-ident'
