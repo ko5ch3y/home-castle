@@ -51,10 +51,6 @@ bindkey -M viins '^[z' vi-cmd-mode
 #-------------------------------------------------------------------------------
 # < Envars >
 #-------------------------------------------------------------------------------
-export PATH="$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
-# ArchLinux paths
-export PATH="$PATH:/usr/bin/vendor_perl:/usr/bin/core_perl"
-
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vi'
 else
@@ -106,4 +102,20 @@ source $HOME/.powerline.zsh
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 #-------------------------------------------------------------------------------
 # </ Misc >
+#-------------------------------------------------------------------------------
+
+
+#-------------------------------------------------------------------------------
+# < PATH >
+#-------------------------------------------------------------------------------
+# Standard paths
+export PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+# ArchLinux paths
+export PATH="$PATH:/usr/bin/vendor_perl:/usr/bin/core_perl"
+# MacPorts path
+export PATH="$PATH:/opt/local/bin"
+# Local path
+export PATH="$HOME/.local/bin:$PATH"
+#-------------------------------------------------------------------------------
+# </ PATH >
 #-------------------------------------------------------------------------------
