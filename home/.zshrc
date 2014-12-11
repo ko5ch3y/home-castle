@@ -112,8 +112,8 @@ source $HOME/.powerline.zsh
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 # ArchLinux paths
 export PATH="$PATH:/usr/bin/vendor_perl:/usr/bin/core_perl"
-# MacPorts path
-export PATH="$PATH:/opt/local/bin"
+# Opt paths
+export PATH="$PATH:/opt/local/bin:/opt/bin"
 # Local path
 export PATH="$HOME/.local/bin:$PATH"
 #-------------------------------------------------------------------------------
