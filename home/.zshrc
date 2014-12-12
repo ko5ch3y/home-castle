@@ -6,7 +6,6 @@ source /etc/profile
 #-------------------------------------------------------------------------------
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
-alias hs='homeshick'
 #-------------------------------------------------------------------------------
 # </ Homeshick setup >
 #-------------------------------------------------------------------------------
@@ -77,6 +76,7 @@ alias au='aunpack --quiet'
 alias d='diff --new-file --text --unified --recursive'
 alias f='df -h'
 alias fr='free --total --mega'
+alias hs='homeshick'
 alias l='ls --group-directories-first -X'
 alias ll='l -lh'
 alias m='make --jobs'
